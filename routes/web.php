@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('login');
+// });
+Route::get('/', 'LoginController@index');
+Route::get('/register', 'LoginController@register');
+
+
+Route::get('/home', 'HomeController@index');
+Route::get('/pertama', 'HomeController@pertama');
+Route::get('/kedua', 'HomeController@kedua');
+Route::get('/ketiga', 'HomeController@ketiga');
+
+Route::get('halo', function () {
+    return "Halo selamat datang";
 });
