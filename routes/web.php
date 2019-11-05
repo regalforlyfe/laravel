@@ -23,6 +23,12 @@ Route::get('/pertama', 'HomeController@pertama');
 Route::get('/kedua', 'HomeController@kedua');
 Route::get('/ketiga', 'HomeController@ketiga');
 
+Route::get('/base', 'AdminController@basefungsi') ;
+Route::get('/dashboard', 'AdminController@dashboardfungsi')-> name('dashboard') ;
+Route::get('/table', 'AdminController@tablefungsi')-> name('table') ;
+Route::get('/chart', 'AdminController@chartfungsi')-> name('chart') ;
+
+
 Route::get('halo', function () {
     return "Halo selamat datang";
 });
