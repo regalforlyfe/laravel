@@ -121,6 +121,16 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('category')}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Category</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('product')}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Product</span></a>
+      </li>
     </ul>
 
     <div id="content-wrapper">
