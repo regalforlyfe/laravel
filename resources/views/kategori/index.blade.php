@@ -1,5 +1,6 @@
 @extends('base')
 @section('konten')
+
     <div id="content-wrapper">
 
       <div class="container-fluid">
@@ -7,36 +8,48 @@
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Table Product</div>
+            Data Table Category</div>
           <div class="card-body">
-            <a href="" class="float-right btn btn-primary">+</a>
+            <a href="{{route('kategori.create')}}" class="float-right btn btn-primary">Tambah</a>
             </br>
             </br>
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Id Product</th>
+                    <th>Id</th>
                     <th>Category</th>
-                    <th>Product Name</th>
-                    <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tfoot>
                   <tr>
-                    <th>Id Product</th>
+                    <th>Id</th>
                     <th>Category</th>
-                    <th>Product Name</th>
-                    <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                   </tr>
                 </tfoot>
                 <tbody>
+                    @foreach($kategori as $value)
                   <tr>
-                    <td>0</td>
-                    <td>System Architect</td>
-                    <td>Nixon</td>
-                    <td>10</td>
+                    <td>{{$value->id_kategori}}</td>
+                    <td>{{$value->nama}}</td>
+                    <td width="1">
+                      <div class="btn-group">
+                        <a href="{{route('kategori.edit',$value->id_kategori)}}" class="btn btn-success btn-sm far fa-edit"></a>
+                      </div>
+                    </td>
+                    <td width="1">
+                      <form action="{{route('kategori.destroy',$value->id_kategori)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger btn-sm far fa-trash-alt" type="submit"></button>
+                      </form>
+                    </td>
                   </tr>
+                    @endforeach
                 </tbody>
               </table>
             </div>

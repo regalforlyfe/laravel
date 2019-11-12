@@ -18,10 +18,8 @@ class AdminController extends Controller
   public function chartfungsi(){
     return view('chart');
   }
-  public function categoryfungsi(){
-    return view('category');
-  }
   public function productfungsi(){
     return view('product');
   }
+  
 }

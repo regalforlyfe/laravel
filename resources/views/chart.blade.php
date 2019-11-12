@@ -87,8 +87,8 @@
 
   <div id="wrapper">
 
-    <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
+   <!-- Sidebar -->
+   <ul class="sidebar navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="{{route('dashboard')}}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -122,9 +122,9 @@
           <span>Tables</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{route('category')}}">
+        <a class="nav-link" href="{{route('kategori.index')}}">
           <i class="fas fa-fw fa-table"></i>
-          <span>Category</span></a>
+          <span>Kategori</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{route('product')}}">
@@ -136,6 +136,7 @@
     <div id="content-wrapper">
 
       <div class="container-fluid">
+
 
         <!-- Area Chart Example-->
         <div class="card mb-3">

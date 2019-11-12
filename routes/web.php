@@ -27,9 +27,9 @@ Route::get('/base', 'AdminController@basefungsi') ;
 Route::get('/dashboard', 'AdminController@dashboardfungsi')-> name('dashboard') ;
 Route::get('/table', 'AdminController@tablefungsi')-> name('table') ;
 Route::get('/chart', 'AdminController@chartfungsi')-> name('chart') ;
-Route::get('/category', 'AdminController@categoryfungsi')-> name('category') ;
 Route::get('/product', 'AdminController@productfungsi')-> name('product') ;
 
+Route::resource('kategori', 'KategoriController');
 
 Route::get('halo', function () {
     return "Halo selamat datang";
